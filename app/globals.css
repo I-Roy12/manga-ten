@@ -19,8 +19,27 @@
   }
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* スマホ対応の追加スタイル */
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
 }
