@@ -21,8 +21,14 @@ const dummyData = [
   { title: "未来への挑戦", author: "革新プロジェクト", imageUrl: "https://placehold.co/300x400/DC2626/FFFFFF?text=人気+4" },
 ];
 
-export default function MangaPage({ params }: { params: Promise<{ title: string }> }) {
-  const { title } = React.use(params);
+interface PageProps {
+  params: {
+    title: string;
+  };
+}
+
+export default function Page({ params }: PageProps) {
+  const { title } = params;
   const [showSample, setShowSample] = useState(false);
 
   const searchParams = useSearchParams();
